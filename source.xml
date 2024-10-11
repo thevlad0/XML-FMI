@@ -5,4 +5,73 @@
     xsi:schemaLocation="hotels_project schema.xsd"
 >
 
+<!-- PAGE HEADER SECTION -->
+<header>
+    <title><!-- TITLE HERE --></title>
+</header>
+
+<!-- PAGE BODY SECTION-->
+<body>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+    <container>
+        <!-- CONTENT HERE -->
+    </container>
+
+</body>
+
+<!-- PAGE FOOTER SECTION -->
+<footer>
+
+    <!-- CONTACT CARD 1-->
+    <contact>
+        <name>
+            <firstname>Vladimir</firstname>
+            <lastname>Velikov</lastname>
+        </name>
+
+        <email>the_vlad0@icloud.com</email>
+    </contact>
+
+    <!-- CONTACT CARD 2-->
+    <contact>
+        <name>
+            <firstname>Kaloyan</firstname>
+            <lastname>Peevski</lastname>
+        </name>
+
+        <email><!-- EMAIL HERE --></email>
+    </contact>
+
+    <date>2024-10-11</date>
+    <location>FMI, SOFIA</location>
+</footer>
+
 </page>
