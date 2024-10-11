@@ -7,86 +7,96 @@
 >
     <xs:element name="page">
         <xs:complexType>
+            <xs:sequence>
 
-            <!-- header tag --> 
-            <xs:element name="header">
-                <xs:complexType>
-                    <xs:element name="title" type="xs:string"/>
-                </xs:complexType>
-            </xs:element>
+                <!-- header tag --> 
+                <xs:element name="header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
 
-            <!-- body tag -->
-            <xs:element name="body">
-                <xs:complexType>
-
-                    <!-- container tag -->
-                    <xs:element name="container">
-                        <xs:complexType>
-
-                        </xs:complexType>
-                    </xs:element>
-
-                </xs:complexType>
-            </xs:element>
-
-            <!-- footer tag -->
-            <xs:element name="footer">
-                <xs:complexType>
-
-                    <!-- contact tag -->
-                    <xs:element name="contact" maxOccurs="2">
+                <!-- body tag -->
+                <xs:element name="body">
+                    <xs:complexType>
                         <xs:sequence>
 
-                            <!-- name tag -->
-                            <xs:element name="name">
-                                <xs:simpleType>
+                            <!-- container tag -->
+                            <xs:element name="container">
+                                <xs:complexType>
                                     <xs:sequence>
 
-                                        <!-- firstname tag-->
-                                        <xs:element name="firstname">
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:string">
-                                                    <xs:pattern value="[a-z]+@(.)+\.com"/>
-                                                </xs:restriction>
-                                            </xs:simpleType>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- footer tag -->
+                <xs:element name="footer">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <!-- contact tag -->
+                            <xs:element name="contact" maxOccurs="2">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <!-- name tag -->
+                                        <xs:element name="name">
+                                            <xs:complexType>
+                                                <xs:sequence>
+
+                                                    <!-- firstname tag-->
+                                                    <xs:element name="firstname">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[A-Z][a-z]+"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+
+                                                    <!-- lastname tag -->
+                                                    <xs:element name="lastname">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[A-Z][a-z]+"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+
+                                                </xs:sequence>
+                                            </xs:complexType>
                                         </xs:element>
 
-                                        <!-- lastname tag -->
-                                        <xs:element name="lastname">
+                                        <!-- email tag-->
+                                        <xs:element name="email">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-                                                    <xs:pattern value="[A-Z][a-z]+"/>
+                                                    <xs:pattern value=".+@.+\.(com|bg)"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
 
                                     </xs:sequence>
-                                </xs:simpleType>
+                                </xs:complexType>
                             </xs:element>
 
-                            <!-- email tag-->
-                            <xs:element name="email">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:pattern value="[a-z]+@(.)+\.com"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
+                            <!-- date tag -->
+                            <xs:element name="date" type="xs:date"/>
+
+                            <!-- location tag -->
+                            <xs:element name="location" type="xs:string"/>
 
                         </xs:sequence>
-                    </xs:element>
+                    </xs:complexType>
+                </xs:element>
 
-                        <!-- date tag -->
-                        <xs:element name="date" type="xs:date"/>
-
-                        <!-- location tag -->
-                        <xs:element name="location" type="xs:string"/>
-
-                    </xs:element>
-
-                </xs:complexType>
-            </xs:element>
-
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 
